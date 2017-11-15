@@ -1,31 +1,45 @@
-
-
-
 web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
-abi = JSON.parse('[{"constant":false,"inputs":[{"name":"candidate","type":"bytes32"}],"name":"totalVotesFor","outputs":[{"name":"","type":"uint8"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"candidate","type":"bytes32"}],"name":"validCandidate","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"bytes32"}],"name":"votesReceived","outputs":[{"name":"","type":"uint8"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"x","type":"bytes32"}],"name":"bytes32ToString","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"candidateList","outputs":[{"name":"","type":"bytes32"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"candidate","type":"bytes32"}],"name":"voteForCandidate","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"contractOwner","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"inputs":[{"name":"candidateNames","type":"bytes32[]"}],"payable":false,"type":"constructor"}]')
+abi =[{"constant":true,"inputs":[{"name":"candidato","type":"bytes32"}],"name":"votosTotalesPara","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"candidato","type":"bytes32"}],"name":"validaCandidato","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"candidatosLista","outputs":[{"name":"","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"candidato","type":"bytes32"}],"name":"votoParaCandidato","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"candidatoNombres","type":"bytes32[]"}],"name":"Voting","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"bytes32"}],"name":"votosRecibidos","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"}]
 VotingContract = web3.eth.contract(abi);
 // In your nodejs console, execute contractInstance.address to get the address at which the contract is deployed and change the line below to use your deployed address
-ContractInstance = VotingContract.at('0x2a9c1d265d06d47e8f7b00ffa987c9185aecf672');
-andidatos = {"PAN": "candidato-1", "PRI": "candidato-2", "PRD": "candidato-3"}
+var ContractInstance = VotingContract.at('0x9861dfdb10d6a093ad78c93dcde0adc89b3183fc');
+
+var candidatos = {"PAN": "candidato-1", "PRI": "candidato-2", "PRD": "candidato-3"}
 
 function votoParaCandidato() {
   candidatoNombres = $("#candidato").val();
-  contractInstance.votoParaCandidato(candidatoNombres, {from: web3.eth.accounts[0]}, function() {
-    let div_id = candidato[candidatoNombres];
-    $("#" + div_id).html(contractInstance.votosTotalesPara.call(candidatoNombres).toString());
-  });
+  //contractInstance.votoParaCandidato(candidatoNombres, {from: web3.eth.accounts[0]}, function() {
+    //let div_id = candidato[candidatoNombres];
+    //$("#" + div_id).html(contractInstance.votosTotalesPara.call(candidatoNombres).toString());
+  //});
 }
 
 $(document).ready(function() {
   candidatoNombres = Object.keys(candidato);
   for (var i = 0; i < candidatoNombres.length; i++) {
     let name = candidatoNombres[i];
-    let val = contractInstance.votosTotalesPara.call(name).toString()
+    let val = ContractInstance.votosTotalesPara.call(name).toString()
     $("#" + candidato[name]).html(val);
   }
 
     $(".btn").click(function() {
-        $("#PRD").html('PENE');
-    });
 
-});
+ContractInstance.votoParaCandidato(candidatoNombres, {from: web3.eth.accounts[0]}, function() {
+    let div_id = candidato[candidatoNombres];
+    $("#" + div_id).html(ContractInstance.votosTotalesPara.call(candidatoNombres).toString());
+  });
+
+
+
+
+
+
+        votoParaCandidato();
+  }); //end onclick
+
+
+
+
+
+}); //end document.redy
+
