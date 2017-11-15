@@ -1,0 +1,43 @@
+body{
+	
+	background: white;
+}
+.mainBlock{
+	float: left;
+	margin-left: 25%;
+	width: 50%;
+	background-color: white;
+	height: 580px;
+	width: 50%;
+	text-align: center;
+	
+	display: none;
+	border-radius: 5%;
+}
+.btn{
+	margin-top: 10%;
+	width: 200px;
+	height: 200px;
+	margin-left: 0%;
+	float: left;
+	left: 0;
+}
+.upper{
+	top: 20;
+	padding: 0 !important;
+	margin-top: 0%;
+	padding-top: 0px;
+	position: absolute;
+	margin-left: 1%;
+}
+.nav{
+	width: 100px;
+	height: 50px;
+}
+.container{
+	width: 100%;
+	margin-top: 50%;
+}
+
+
+
