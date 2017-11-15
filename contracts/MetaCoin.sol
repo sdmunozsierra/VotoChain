@@ -9,6 +9,7 @@ import "./ConvertLib.sol";
 
 contract MetaCoin {
 	mapping (address => uint) balances;
+	string public voto= "";
 
 	event Transfer(address indexed _from, address indexed _to, uint256 _value);
 
@@ -30,5 +31,10 @@ contract MetaCoin {
 
 	function getBalance(address addr) returns(uint) {
 		return balances[addr];
+	}
+
+	function setVoto(string partido) returns(string){
+		voto= partido;
+		return voto;
 	}
 }
