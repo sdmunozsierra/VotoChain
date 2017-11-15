@@ -1,41 +1,52 @@
-body{
-	
-	background: #3072AE;
-}
-.mainBlock{
-	float: left;
-	margin-left: 25%;
-	width: 50%;
-	background-color: white;
-	height: 580px;
-	width: 50%;
-	text-align: center;
-	
-	display: none;
-	border-radius: 5%;
-}
-.btn{
-	margin-top: 10%;
-	width: 200px;
-	height: 200px;
-	margin-left: 0%;
-	float: left;
-	left: 0;
-}
-.upper{
-	top: 20;
-	padding: 0 !important;
-	margin-top: 0%;
-	padding-top: 0px;
-	position: absolute;
-	margin-left: 1%;
-}
-.nav{
-	width: 100px;
-	height: 50px;
-}
-.container{
-	width: 100%;
-	margin-top: 50%;
+body {
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 10%;
+  font-family: "Open Sans", sans-serif;
 }
 
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+input {
+  width: 500px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+button {
+  font-size: 16px;
+  padding: 5px;
+}
+
+h1, h2 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #AAA;
+  font-size: 32px;
+}
+
+h3 {
+  font-weight: normal;
+  color: #AAA;
+  font-size: 24px;
+}
+
+.black {
+  color: black;
+}
+
+#balance {
+  color: black;
+}
+
+.hint {
+  color: #666;
+}
