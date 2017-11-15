@@ -46,15 +46,14 @@ contract Votar {
     return false;
   }
 
-function stringToBytes32(string source) returns (bytes32 result) {
-    bytes memory tempEmptyStringTest = bytes(source);
-    if (tempEmptyStringTest.length == 0) {
-        return 0x0;
-    }
+  function stringToBytes32(string memory source) returns (bytes32 result) {
+      bytes memory tempEmptyStringTest = bytes(source);
+      if (tempEmptyStringTest.length == 0) {
+          return 0x0;
+      }
 
-
-    assembly {
-        result := mload(add(source, 32))
-    }
-}
+      assembly {
+          result := mload(add(source, 32))
+      }
+  }
 }
