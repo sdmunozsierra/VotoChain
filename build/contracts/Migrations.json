@@ -64,10 +64,23 @@
     "1510766966603": {
       "events": {},
       "links": {},
+<<<<<<< HEAD
       "address": "0x1d4ed8f9513d6a2d3b1f81677299b857d7c785a4",
       "updated_at": 1510772865181
     }
   },
   "schema_version": "0.0.5",
   "updated_at": 1510772865181
+=======
+      "address": "0xb1c140136096cbe117b836d981ed79e99d675898"
+    },
+    "1510751604323": {
+      "events": {},
+      "links": {},
+      "address": "0xfb27f46c2ecf48189df5bdd54ded755c37b7c3a7"
+    }
+  },
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2017-11-15T13:50:10.871Z"
+>>>>>>> 2d523cdab045e645472fc0ccb79632cb8e58d142
 }
