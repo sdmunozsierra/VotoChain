@@ -1,12 +1,17 @@
 # VOTOCHAIN
 
-`testrpc --gasLimit 6721975 --gasPrice 100000000000
-truffle compile 
-truffle migrate 
+Para hacer test primero en una terminal corre testrpc con este comando
+`testrpc --gasLimit 6721975 --gasPrice 100000000000`
 
-npm run dev
+En otra terminal en el directorio de VotoChain corre:
+`truffle compile`
 
-` 
+Luego:
+`truffle migrate `
+
+Finalmente para verlo en el web browser:
+`npm run dev`
+
 front end en tu web browser:
 http://localhost:8080
 
