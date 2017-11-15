@@ -11,16 +11,21 @@ andidatos = {"PAN": "candidato-1", "PRI": "candidato-2", "PRD": "candidato-3"}
 function votoParaCandidato() {
   candidatoNombres = $("#candidato").val();
   contractInstance.votoParaCandidato(candidatoNombres, {from: web3.eth.accounts[0]}, function() {
-    let div_id = candidatos[candidatoNombres];
+    let div_id = candidato[candidatoNombres];
     $("#" + div_id).html(contractInstance.votosTotalesPara.call(candidatoNombres).toString());
   });
 }
 
 $(document).ready(function() {
-  candidatoNombres = Object.keys(candidatos);
+  candidatoNombres = Object.keys(candidato);
   for (var i = 0; i < candidatoNombres.length; i++) {
     let name = candidatoNombres[i];
     let val = contractInstance.votosTotalesPara.call(name).toString()
-    $("#" + candidatos[name]).html(val);
+    $("#" + candidato[name]).html(val);
   }
+
+    $(".btn").click(function() {
+        $("#PRD").html('PENE');
+    });
+
 });
