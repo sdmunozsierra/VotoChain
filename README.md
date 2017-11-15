@@ -2,7 +2,7 @@
 
 DAPP basada en Solidity desarrollada para solucionar la corrupcion en el actual sistema de votacion.
 
-##Como empezar.
+## Como empezar
 
 Primero, asegurase de tener el repositorio de VotoCahin el cual puede ser encontrado en https://github.com/sdmunozsierra/VotoChain
 
@@ -30,7 +30,7 @@ Para hacerlo ingrese
 
 en su navegador.
 
-##Prerequisitos
+## Prerequisitos
 
 Google Chrome, requerido para utilizar MetaMask.
 
@@ -46,7 +46,7 @@ Node.js, disponible para descarga gratuita en https://nodejs.org/en/download/.
 webpack-dev-server deberia estar incluido al momento de instalar Node.js. En ciertos casos este a faltado. Si eso ocurre ingrese el siguiente comando en su terminal.
 npm install webpack-dev-server -g
 
-##Built With
+## Built With
 
 Solidity - Usado para escribir los SmartContracts.
 
@@ -56,7 +56,7 @@ testrpc - Cliente diseñado para pruebas y desarrollo de Ethereum.
 
 Node.js - Package manager en el que se ejecutan los Scripts.
 
-##Authors
+## Authors
 
 Marco Alanis
 
@@ -64,10 +64,10 @@ Carlos Jimenez
 
 Sergio Muñoz
 
-##License
+## License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
 
-##Reconocimientos
+## Reconocimientos
 
 Sergio el mentor
