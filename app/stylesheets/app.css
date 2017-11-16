@@ -1,12 +1,12 @@
 body{
 	
-	background: #3072AE;
+	background: white;
 }
 .mainBlock{
 	float: left;
 	margin-left: 25%;
 	width: 50%;
-	background-color: white;
+	background-color: #3072AE;
 	height: 580px;
 	width: 50%;
 	text-align: center;
