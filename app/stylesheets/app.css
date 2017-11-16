@@ -1,6 +1,6 @@
 body{
 	
-	background: #3072AE;
+	background-color: #3072AE;
 }
 .mainBlock{
 	float: left;
@@ -30,7 +30,7 @@ body{
 }
 .container{
 	width: 100%;
-	margin-top: 50%;
+	margin-top: 35%;
 	background-color: white;
 }
 
